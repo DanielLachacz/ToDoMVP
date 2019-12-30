@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,6 +97,7 @@ public class SaveFragment extends DialogFragment implements SaveContract.View {
                 calendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 String date = java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM).format(calendar.getTime());
 
+                Log.e("SaveFragment", date);
                 dateEditText.setText(date);
             }
         };

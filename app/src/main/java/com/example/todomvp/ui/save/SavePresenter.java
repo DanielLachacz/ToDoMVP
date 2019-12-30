@@ -24,7 +24,7 @@ public class SavePresenter implements SaveContract.Presenter, RealmService.OnTra
     @Override
     public void addTaskClick(String text, String date, String time, boolean status) {
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMMM dd, yyyy", Locale.ENGLISH);
         try {
             Date longDate = dateFormat.parse(date);
             realmService.addTask(text, date, longDate, time, status, this);
